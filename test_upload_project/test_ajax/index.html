@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<script src="http://malsup.github.com/jquery.form.js"></script>
+	<script>
+	$('#image_form').ajaxForm({
+			success: function(data) {
+				console.dir(data)
+			}
+	})
+	</script>
+</head>
+<body>
+
+<form id="image_form" action="http://localhost:8000/file/" method="post" enctype="multipart/form-data">
+	<input type="file" name="cover"><br>
+	<input type="submit" value="Upload File to Server">
+</form>
+
+</body>
+</html>
